@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>あなたの名前 — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">SOUTA ABE</div>
+    <nav class="main-nav">
+      <a href="#top">TOP</a>
+      <a href="#works">WORKS</a>
+      <a href="#about">BIO</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <div class="social">
+      <a href="#" aria-label="twitter">TW</a>
+      <a href="#" aria-label="instagram">IG</a>
+      <a href="#" aria-label="github">GH</a>
+    </div>
+  </header>
+
+  <main id="top" class="hero">
+    <div class="hero-grid">
+      <a class="hero-item" href="#works">
+        <img src="images/hero1.jpg" alt="作品1">
+        <div class="caption">PROJECT A</div>
+      </a>
+      <a class="hero-item" href="#works">
+        <img src="images/hero2.jpg" alt="作品2">
+        <div class="caption">PROJECT B</div>
+      </a>
+      <a class="hero-item" href="#works">
+        <img src="images/hero3.jpg" alt="作品3">
+        <div class="caption">PROJECT C</div>
+      </a>
+    </div>
+  </main>
+
+  <section id="works" class="works">
+    <h2>WORKS</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/thumb1.jpg" alt="">
+        <h3>Project A</h3>
+        <p>短い説明。使った技術など。</p>
+      </article>
+      <article class="card">
+        <img src="images/thumb2.jpg" alt="">
+        <h3>Project B</h3>
+        <p>短い説明。</p>
+      </article>
+      <!-- 追加 -->
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>BIOGRAPHY</h2>
+    <p>自己紹介・活動概要・使用ツール（Blender / TouchDesigner / After Effectsなど）を書こう。</p>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <p>© あなたの名前 <span id="year"></span></p>
+  </footer>
+</body>
+</html>
