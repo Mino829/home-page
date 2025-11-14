@@ -1,3 +1,5 @@
+/* styles.css — 精度を整えた最新版 */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
 * {
@@ -11,13 +13,14 @@ html {
 }
 
 body {
-  background: #f6f5f2; /* より自然なZEN生成りトーン */
+  background: #f6f5f2;
   color: #111;
   font-family: 'Inter', sans-serif;
   line-height: 1.9;
   overflow-x: hidden;
   transition: background 0.5s ease;
   padding-top: 40px;
+  text-align: center;
 }
 
 /* ===== HEADER ===== */
@@ -94,6 +97,7 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
+  display: block;
 }
 
 .hero-item img {
@@ -120,34 +124,20 @@ body {
   border-radius: 6px;
 }
 
-/* ===== WORKS ===== */
-.works-page {
-  padding: 100px 5vw;
-  background: #f1efeb;
-  color: #111;
-  min-height: 100vh;
-  transition: background 0.5s ease;
+/* ===== WORKS SECTION ===== */
+.works {
+  padding: 100px 6vw;
 }
 
-.page-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.page-header h1 {
-  font-size: 2.6rem;
+.works h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  padding-left: 4px;
   letter-spacing: 0.08em;
-  font-weight: 500;
-  color: #1f1f1f;
+  color: #222;
 }
 
-.page-header p {
-  font-size: 1rem;
-  opacity: 0.65;
-  margin-top: 10px;
-}
-
-/* カード配置 */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -156,88 +146,76 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255,255,255,0.65);
   border-radius: 16px;
   overflow: hidden;
   max-width: 350px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.4s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
 .card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  display: block;
 }
 
 .card h3 {
   font-size: 1.15rem;
-  margin: 16px 20px 6px;
+  margin: 16px 24px 6px;
   font-weight: 500;
+  padding-left: 6px;
 }
 
 .card p {
   font-size: 0.9rem;
-  margin: 0 20px 20px;
+  margin: 0 24px 20px;
   color: #3a8b83;
+  padding-left: 6px;
 }
 
 /* ===== ABOUT ===== */
+.about-page h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding-left: 4px; /* WORKS の h2 と同じ左寄せ感 */
+  letter-spacing: 0.08em;
+  color: #222;
+}
+
+.about-page p {
+  max-width: 720px;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  padding-left: 4px;
+  line-height: 1.85;
+}
 .about-page {
   padding: 100px 5vw;
+  text-align: center;
   background: #f4f3f0;
   color: #111;
 }
 
-.bio-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.bio-text {
-  flex: 1 1 400px;
-  max-width: 600px;
-  line-height: 1.9;
-}
-
-.bio-image {
-  flex: 1 1 300px;
-  max-width: 400px;
-}
-
-.bio-image img {
-  width: 100%;
-  border-radius: 16px;
-  filter: grayscale(20%) brightness(1.05);
-  transition: filter 0.4s ease;
-}
-
-.bio-image img:hover {
-  filter: grayscale(0%) brightness(1);
-}
+.about-page 
 
 /* ===== FOOTER ===== */
 .site-footer {
   text-align: center;
   padding: 60px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 0.85rem;
   color: #555;
   background: #f6f5f2;
 }
 
-/* ===== ZEN Cursor ===== */
+/* ===== Cursor ===== */
 .cursor {
   width: 12px;
   height: 12px;
@@ -249,4 +227,10 @@ body {
   mix-blend-mode: multiply;
   z-index: 9999;
   transition: width 0.2s, height 0.2s, background 0.2s;
+}
+
+.bio-text {
+  max-width: 680px;     /* 読みやすい横幅に制限 */
+  margin: 0 auto;       /* センター配置 */
+  text-align: center;   /* テキストも中央揃え */
 }
