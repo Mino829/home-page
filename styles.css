@@ -1,5 +1,6 @@
-/* styles.css — 精度を整えた最新版 */
-
+/* =======================================
+    BASE
+======================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
 * {
@@ -18,12 +19,13 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.9;
   overflow-x: hidden;
-  transition: background 0.5s ease;
   padding-top: 40px;
   text-align: center;
 }
 
-/* ===== HEADER ===== */
+/* =======================================
+    HEADER
+======================================= */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +56,6 @@ body {
   position: relative;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
-  transition: color 0.3s ease;
 }
 
 .main-nav a::after {
@@ -80,7 +81,9 @@ body {
   font-weight: 600;
 }
 
-/* ===== HERO ===== */
+/* =======================================
+    HERO
+======================================= */
 .hero {
   max-width: 1200px;
   margin: 0 auto;
@@ -105,7 +108,6 @@ body {
   height: 300px;
   object-fit: cover;
   transition: transform 0.6s ease;
-  display: block;
 }
 
 .hero-item:hover img {
@@ -118,13 +120,14 @@ body {
   left: 16px;
   color: #fff;
   font-size: 1rem;
-  letter-spacing: 0.05em;
   background-color: rgba(0, 0, 0, 0.35);
   padding: 5px 10px;
   border-radius: 6px;
 }
 
-/* ===== WORKS SECTION ===== */
+/* =======================================
+    WORKS
+======================================= */
 .works {
   padding: 100px 6vw;
 }
@@ -133,9 +136,9 @@ body {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 40px;
-  padding-left: 4px;
   letter-spacing: 0.08em;
   color: #222;
+  text-align: center;
 }
 
 .cards {
@@ -151,12 +154,11 @@ body {
   overflow: hidden;
   max-width: 350px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.4s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  background: rgba(255,255,255,0.85);
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
@@ -170,52 +172,54 @@ body {
   font-size: 1.15rem;
   margin: 16px 24px 6px;
   font-weight: 500;
-  padding-left: 6px;
+  text-align: left;
 }
 
 .card p {
   font-size: 0.9rem;
   margin: 0 24px 20px;
   color: #3a8b83;
-  padding-left: 6px;
+  text-align: left;
 }
 
-/* ===== ABOUT ===== */
-.about-page h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-  padding-left: 4px; /* WORKS の h2 と同じ左寄せ感 */
-  letter-spacing: 0.08em;
-  color: #222;
-}
-
-.about-page p {
-  max-width: 720px;
-  font-size: 1rem;
-  margin-bottom: 24px;
-  padding-left: 4px;
-  line-height: 1.85;
-}
+/* =======================================
+    ABOUT PAGE
+======================================= */
 .about-page {
   padding: 100px 5vw;
   text-align: center;
-  background: #f4f3f0;
-  color: #111;
 }
 
-.about-page 
+.about-page h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: 0.08em;
+}
 
-/* ===== FOOTER ===== */
+.bio-text {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bio-text p {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+/* =======================================
+    FOOTER
+======================================= */
 .site-footer {
   text-align: center;
   padding: 60px 0;
   font-size: 0.85rem;
   color: #555;
-  background: #f6f5f2;
 }
 
-/* ===== Cursor ===== */
+/* =======================================
+    CURSOR
+======================================= */
 .cursor {
   width: 12px;
   height: 12px;
@@ -226,136 +230,45 @@ body {
   transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
   z-index: 9999;
-  transition: width 0.2s, height 0.2s, background 0.2s;
 }
 
-.bio-text {
-  max-width: 680px;     /* 読みやすい横幅に制限 */
-  margin: 0 auto;       /* センター配置 */
-  text-align: center;   /* テキストも中央揃え */
-}
+/* =======================================
+    RESPONSIVE
+======================================= */
 
-/* --------------------
-    Base
--------------------- */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  line-height: 1.8;
-  color: #222;
-  text-align: center; /* 全体センター */
-}
-
-h1, h2 {
-  margin: 40px 0 20px;
-  font-weight: 600;
-  text-align: center;
-}
-
-p {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 800px;
-  text-align: center;
-}
-
-/* --------------------
-    HEADER NAV
--------------------- */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 40px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-/* --------------------
-    BIO セクション
--------------------- */
-
-.bio-text {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 10px 20px;
-}
-
-.bio-text p {
-  font-size: 18px;
-  line-height: 2;
-  text-align: center;
-}
-
-/* --------------------
-    Responsive
--------------------- */
-
-/* 768px（スマホ・タブレット） */
+/* タブレット以下 */
 @media screen and (max-width: 768px) {
 
-  header {
+  .site-header {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    padding: 18px 4vw;
+    gap: 16px;
   }
 
-  nav ul {
-    gap: 20px;
+  .main-nav {
     flex-wrap: wrap;
+    gap: 18px;
     justify-content: center;
   }
 
-  h1 {
-    font-size: 28px;
-    margin-top: 30px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  .bio-text p {
-    font-size: 16px;
-    line-height: 1.9;
+  body {
+    padding-top: 20px;
   }
 }
 
-/* 480px（スマホ小画面） */
+/* スマホ小 */
 @media screen and (max-width: 480px) {
-  body {
-    line-height: 1.7;
+
+  .site-header {
+    padding: 14px 5vw;
+    gap: 12px;
   }
 
-  h1 {
-    font-size: 24px;
+  .main-nav {
+    gap: 12px;
   }
 
-  h2 {
-    font-size: 20px;
-  }
-  
-  .bio-text {
-    padding: 0 15px;
-  }
-
-  .bio-text p {
-    font-size: 15px;
-  }
-
-  nav ul {
-    gap: 15px;
+  .hero-item img {
+    height: 220px;
   }
 }
